@@ -12,29 +12,12 @@ $(function() {
 
 		//check if age is greater than 18
 		if (age  >= 18) {
-
-			$("#disney-form").show();
-			$("#age-form").hide();
+			$("#answer").text("Come on in!")
+			$("#club-img").attr("src","http://cdn2.teen.com/wp-content/uploads/2013/09/rihanna-dance.gif")
 			} else {
 			$("#answer").text("Nice try, come back with a better ID.");
 			$("#club-img").attr("src", "https://media.tenor.co/images/53d1a55162302c171121136576f77c42/tenor.gif");
 		}
-	});
-
-	$("#disney-submit").click(function(){
-		var disneyMoviesString = $("#disney-movies").val();
-		var disneyMovies = parseInt(disneyMoviesString);
-
-		if (disneyMovies > 4 ) {
-			$("#disney-form").hide();
-			$("#answer").text("Go ahead!");
-			$("#club-img").attr("src","https://media.giphy.com/media/3o7aTkzctUbDfzDJ84/giphy.gif");
-
-		} else {
-			$("#answer").text("Bye.");
-			$("#club-img").attr("src", "https://media.tenor.co/images/53d1a55162302c171121136576f77c42/tenor.gif");
-		}
-			
 	});	
 	
 });
